@@ -13,3 +13,33 @@ ultima_vitoria = " "
 sequencia_atual = 0
 maior_sequencia = 0
 jogador_maior_sequencia = " "
+
+sair = False
+
+# MENU PRINCIPAL
+while sair == False:
+
+    print("\n===== JOGO DA VELHA =====")
+    print("1 - Jogar")
+    print("2 - Ver regras")
+    print("3 - Ver placar")
+    print("4 - Sair")
+
+    opcao = input("Escolha uma opcao: ")
+
+    if opcao == "1":
+
+        jogar_novamente = "s"
+
+        while jogar_novamente == "s":
+
+            # Matriz declarada linha por linha
+            tabuleiro = [
+                [" ", " ", " "],
+                [" ", " ", " "],
+                [" ", " ", " "]
+            ]
+
+            jogador = "X"
+            venceu = False
+            rodada = 0
