@@ -99,7 +99,9 @@ while sair == False:
                 # VERIFICA SE A CASA ESTA LIVRE
                 if tabuleiro[linha][coluna] != " ":
  
-                     for j in range(3):if tabuleiro[i][j]==jogador:print("Casa ocupada! Escolha outra posicao.")
+                     for j in range(3):if tabuleiro[i][j]==jogador:
+                  
+                     print("Casa ocupada! Escolha outra posicao.")
 
                 else:
 
