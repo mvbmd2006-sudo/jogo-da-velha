@@ -137,3 +137,17 @@ while sair == False:
                         if tabuleiro[i][i] == jogador:
                             quantidade = quantidade + 1if quantidade == 3:
                         venceu = True
+
+                    # VERIFICACAO DA DIAGONAL SECUNDARIA
+                    quantidade = 0
+
+                    for i in range(3):
+                        if tabuleiro[i][2 - i] == jogador:
+                            quantidade = quantidade + 1
+
+                    if quantidade == 3:
+                        venceu = True
+  if jogador == "X":
+                            vitorias_x = vitorias_x + 1
+                        else:
+                            vitorias_o = vitorias_o + 1
