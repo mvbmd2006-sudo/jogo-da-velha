@@ -166,3 +166,16 @@ while sair == False:
                         if sequencia_atual > maior_sequencia:
                             maior_sequencia = sequencia_atual
                             jogador_maior_sequencia = jogador
+
+ print("\nJogador " + jogador + " venceu!")
+
+                    else:
+
+                        # Verifica se ainda existem casas vazias
+                        vazias = 0
+
+                        for i in range(3):
+                            for j in range(3):
+                                if tabuleiro[i][j] == " ":
+                                    vazias = vazias + 1
+
