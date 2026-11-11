@@ -153,3 +153,16 @@ while sair == False:
                             vitorias_x = vitorias_x + 1
                         else:
                             vitorias_o = vitorias_o + 1
+ partidas = partidas + 1
+
+                        # Atualiza a sequencia de vitorias
+                        if ultima_vitoria == jogador:
+                            sequencia_atual = sequencia_atual + 1
+                        else:
+                            sequencia_atual = 1
+
+                        ultima_vitoria = jogador
+
+                        if sequencia_atual > maior_sequencia:
+                            maior_sequencia = sequencia_atual
+                            jogador_maior_sequencia = jogador
