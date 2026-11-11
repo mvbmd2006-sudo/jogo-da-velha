@@ -128,3 +128,12 @@ while sair == False:
                                 quantidade = quantidade + 1
 
                         if quantidade == 3:
+                            venceu = True
+
+                    # VERIFICACAO DA DIAGONAL PRINCIPAL
+                    quantidade = 0
+
+                    for i in range(3):
+                        if tabuleiro[i][i] == jogador:
+                            quantidade = quantidade + 1if quantidade == 3:
+                        venceu = True
