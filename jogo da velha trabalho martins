@@ -118,3 +118,13 @@ while sair == False:
 
                         if quantidade == 3:
                             venceu = True
+              # VERIFICACAO DAS COLUNAS
+                    for j in range(3):
+
+                        quantidade = 0
+
+                        for i in range(3):
+                            if tabuleiro[i][j] == jogador:
+                                quantidade = quantidade + 1
+
+                        if quantidade == 3:
