@@ -99,9 +99,7 @@ while sair == False:
                 # VERIFICA SE A CASA ESTA LIVRE
                 if tabuleiro[linha][coluna] != " ":
  
-                     for j in range(3):if tabuleiro[i][j]==jogador:
-                  
-                     print("Casa ocupada! Escolha outra posicao.")
+                    print("Casa ocupada! Escolha outra posicao.")
 
                 else:
 
@@ -120,7 +118,8 @@ while sair == False:
 
                         if quantidade == 3:
                             venceu = True
-              # VERIFICACAO DAS COLUNAS
+
+                    # VERIFICACAO DAS COLUNAS
                     for j in range(3):
 
                         quantidade = 0
@@ -137,7 +136,9 @@ while sair == False:
 
                     for i in range(3):
                         if tabuleiro[i][i] == jogador:
-                            quantidade = quantidade + 1if quantidade == 3:
+                            quantidade = quantidade + 1
+
+                    if quantidade == 3:
                         venceu = True
 
                     # VERIFICACAO DA DIAGONAL SECUNDARIA
@@ -149,11 +150,16 @@ while sair == False:
 
                     if quantidade == 3:
                         venceu = True
-  if jogador == "X":
+
+                    # SE HOUVE VITORIA
+                    if venceu == True:
+
+                        if jogador == "X":
                             vitorias_x = vitorias_x + 1
                         else:
                             vitorias_o = vitorias_o + 1
- partidas = partidas + 1
+
+                        partidas = partidas + 1
 
                         # Atualiza a sequencia de vitorias
                         if ultima_vitoria == jogador:
@@ -167,7 +173,7 @@ while sair == False:
                             maior_sequencia = sequencia_atual
                             jogador_maior_sequencia = jogador
 
- print("\nJogador " + jogador + " venceu!")
+                        print("\nJogador " + jogador + " venceu!")
 
                     else:
 
@@ -179,7 +185,7 @@ while sair == False:
                                 if tabuleiro[i][j] == " ":
                                     vazias = vazias + 1
 
- jogad # Verifica o empate
+                        # Verifica o empate
                         if vazias == 0 and venceu == False:
 
                             empates = empates + 1
@@ -196,9 +202,10 @@ while sair == False:
                             # Alterna os jogadores
                             if jogador == "X":
                                 jogador = "O"
-                            else:or = "X"
+                            else:
+                                jogador = "X"
 
-# Exibe o tabuleiro final
+            # Exibe o tabuleiro final
             print("\n===== TABULEIRO FINAL =====")
             print("    1   2   3")
 
@@ -216,7 +223,7 @@ while sair == False:
                 if i < 2:
                     print("   ---+---+---")
 
-  # PLACAR AO FINAL DA PARTIDA
+            # PLACAR AO FINAL DA PARTIDA
             print("\n===== PLACAR =====")
             print("Vitorias de X: " + str(vitorias_x))
             print("Vitorias de O: " + str(vitorias_o))
@@ -264,7 +271,7 @@ while sair == False:
 
         if partidas > 0:
 
-         percentual_x = vitorias_x * 100.0 / partidas
+            percentual_x = vitorias_x * 100.0 / partidas
             percentual_o = vitorias_o * 100.0 / partidas
 
             print("Percentual de vitorias de X: "
@@ -294,35 +301,6 @@ while sair == False:
 
         if partidas > 0:
 
-              percentual_x = vitorias_x * 100.0 / partidas
-            percentual_o = vitorias_o * 100.0 / partidas
-
-            print("Percentual de vitorias de X: "
-                  + str(percentual_x) + "%")
-
-            print("Percentual de vitorias de O: "
-                  + str(percentual_o) + "%")
-
-        else:
-            print("Ainda nao existem partidas concluidas.")
-
-        print("Maior sequencia de vitorias: "
-              + str(maior_sequencia))
-
-        if maior_sequencia > 0:
-            print("Jogador da maior sequencia: "
-                  + jogador_maior_sequencia)
-
-    elif opcao == "4":
-
-        # ESTATISTICAS FINAIS DO DESAFIO
-        print("\n===== ESTATISTICAS FINAIS =====")
-        print("Total de partidas: " + str(partidas))
-        print("Vitorias de X: " + str(vitorias_x))
-        print("Vitorias de O: " + str(vitorias_o))
-        print("Empates: " + str(empates))
-
-        if partidas > 0:
             percentual_x = vitorias_x * 100.0 / partidas
             percentual_o = vitorias_o * 100.0 / partidas
 
