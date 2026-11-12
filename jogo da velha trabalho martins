@@ -293,3 +293,33 @@ while sair == False:
         print("Empates: " + str(empates))
 
         if partidas > 0:
+
+              percentual_x = vitorias_x * 100.0 / partidas
+            percentual_o = vitorias_o * 100.0 / partidas
+
+            print("Percentual de vitorias de X: "
+                  + str(percentual_x) + "%")
+
+            print("Percentual de vitorias de O: "
+                  + str(percentual_o) + "%")
+
+        else:
+            print("Ainda nao existem partidas concluidas.")
+
+        print("Maior sequencia de vitorias: "
+              + str(maior_sequencia))
+
+        if maior_sequencia > 0:
+            print("Jogador da maior sequencia: "
+                  + jogador_maior_sequencia)
+
+    elif opcao == "4":
+
+        # ESTATISTICAS FINAIS DO DESAFIO
+        print("\n===== ESTATISTICAS FINAIS =====")
+        print("Total de partidas: " + str(partidas))
+        print("Vitorias de X: " + str(vitorias_x))
+        print("Vitorias de O: " + str(vitorias_o))
+        print("Empates: " + str(empates))
+
+        if partidas > 0:
