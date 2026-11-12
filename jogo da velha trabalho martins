@@ -179,3 +179,21 @@ while sair == False:
                                 if tabuleiro[i][j] == " ":
                                     vazias = vazias + 1
 
+ jogad # Verifica o empate
+                        if vazias == 0 and venceu == False:
+
+                            empates = empates + 1
+                            partidas = partidas + 1
+
+                            # O empate interrompe a sequencia
+                            ultima_vitoria = " "
+                            sequencia_atual = 0
+
+                            print("\nA partida terminou em empate!")
+
+                        else:
+
+                            # Alterna os jogadores
+                            if jogador == "X":
+                                jogador = "O"
+                            else:or = "X"
