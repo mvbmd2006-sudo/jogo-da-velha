@@ -231,3 +231,35 @@ while sair == False:
                 jogar_novamente = input(
                     "\nDeseja jogar novamente? (s/n): "
                 )
+
+                if jogar_novamente == "s":
+                    resposta_valida = True
+
+                elif jogar_novamente == "n":
+                    resposta_valida = True
+
+                else:
+                    print("Digite s para sim ou n para nao.")
+
+    elif opcao == "2":
+
+        print("\n===== REGRAS =====")
+        print("O tabuleiro possui 3 linhas e 3 colunas.")
+        print("O jogador X comeca.")
+        print("Os jogadores alternam entre X e O.")
+        print("Digite uma linha e uma coluna de 1 a 3.")
+        print("Nao e permitido ocupar uma casa preenchida.")
+        print("Vence quem formar tres simbolos iguais")
+        print("em uma linha, coluna ou diagonal.")
+        print("Se todas as casas forem ocupadas sem vencedor,")
+        print("a partida termina em empate.")
+
+    elif opcao == "3":
+
+        print("\n===== PLACAR DA SESSAO =====")
+        print("Partidas realizadas: " + str(partidas))
+        print("Vitorias de X: " + str(vitorias_x))
+        print("Vitorias de O: " + str(vitorias_o))
+        print("Empates: " + str(empates))
+
+        if partidas > 0:
