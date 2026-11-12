@@ -215,3 +215,19 @@ while sair == False:
 
                 if i < 2:
                     print("   ---+---+---")
+
+  # PLACAR AO FINAL DA PARTIDA
+            print("\n===== PLACAR =====")
+            print("Vitorias de X: " + str(vitorias_x))
+            print("Vitorias de O: " + str(vitorias_o))
+            print("Empates: " + str(empates))
+            print("Partidas: " + str(partidas))
+
+            # Pergunta se deseja jogar novamente
+            resposta_valida = False
+
+            while resposta_valida == False:
+
+                jogar_novamente = input(
+                    "\nDeseja jogar novamente? (s/n): "
+                )
